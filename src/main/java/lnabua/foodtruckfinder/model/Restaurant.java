@@ -6,36 +6,39 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 // creates table in database
 @Table(name = "restaurants")
-@Getter
-@Setter
-@EqualsAndHashCode
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+//@Getter
+//@Setter
+//@EqualsAndHashCode
 public class Restaurant {
 
     @Id //marks field as primary key
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    public int id;
 
-    private String name;
+    public String name;
 
-    private String locationDescription;
+    public String locationDescription;
 
-    private String address;
+    public String address;
 
-    private String foodItems;
+    public String foodItems;
 
-    private double latitude;
+    public double latitude;
 
-    private double longitude;
+    public double longitude;
 
-    private String schedule;
+    public String schedule;
 
-    private String coordinate;
+    public String coordinate;
 
 }
