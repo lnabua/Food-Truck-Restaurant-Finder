@@ -68,7 +68,7 @@ Future enhancements to include:
 
 ### Live Link
 You can access the app here:
-insert link
+https://foodtruck-app-1.herokuapp.com/
 
 ### Author
 Lorraine Nabua
