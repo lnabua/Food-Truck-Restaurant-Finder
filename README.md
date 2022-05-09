@@ -14,8 +14,24 @@ Update a restuarant
 Sort restaurant list by name
 ![result](place image here)
 
-### Introduction
-Food-Truck-Restaurant-Finder web app helps users to find the a food truck or restaurant, . 
+### Getting Started
+* Fork/Clone project to local
+* Open project in IntelliJ IDEA
+* Run server in IntelliJ IDEA.
+* Open MySQL Workbench and run database. See application.properties in project directory/Resources for database information.
+* Open frontend folder within project in VSCode
+* Run *npm install* to startup web page.
+
+### Architechture Overview
+##### React
+* Router: App.js
+* Components: RestaurantList, RestaurantDetails, RestaurantCard, AddRestaurant 
+* Service: restaurant.service
+
+##### Spring Boot
+* Model: Restaurant
+* Controller: RestaurantController
+* Repository: Restaurant Repository
 
 ##### MVP
 * As a user I should be able to see the list of retaurants so that I can select the one I want to know more about.
