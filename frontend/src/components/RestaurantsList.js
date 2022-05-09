@@ -3,11 +3,22 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import restaurantService from "../restaurant.service";
 import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
+import RestaurantDetails from "./RestaurantDetails";
 
 const RestaurantList = () => {
 
     const [restaurants, setRestaurants] = useState([]);
     const [sorted, setSorted] = useState(false);
+    const [selectedRestaurant, setSelectedRestaurant] = useState(null);
+
+    useEffect(() => {
+        init();
+      }, []);
+
+    if (selectedRestaurant != null) {
+        return <RestaurantDetails restaurant={restaurants.find(restaurant => restaurant.id == selectedRestaurant)} 
+            setSelectedRestaurant={setSelectedRestaurant}/>;
+    }
 
     if (sorted) {
         restaurants.sort((a, b) => {
@@ -25,9 +36,7 @@ const RestaurantList = () => {
     }
     
 
-    useEffect(() => {
-      init();
-    }, []);
+    
 
     const init = () => {
         restaurantService.getAll()
@@ -75,7 +84,7 @@ const RestaurantList = () => {
 
     return ( 
         <div className="container">
-            <h3>List of Restaurants</h3>
+            <h3>Find a Food Truck or a Restaurant</h3>
             <hr/>
             <div className="row">
                 <div className="col-4">
@@ -91,7 +100,7 @@ const RestaurantList = () => {
                 {
                 restaurants.map(restaurant => (
                     <RestaurantCard id={restaurant.id} key={restaurant.id} name={restaurant.name} 
-                    food={restaurant.foodItems} handleDelete={handleDelete} />
+                    food={restaurant.foodItems} handleDelete={handleDelete} setSelectedRestaurant={setSelectedRestaurant} />
                 ))
                 }
             </div>

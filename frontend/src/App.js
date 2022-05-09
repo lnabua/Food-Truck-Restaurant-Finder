@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import RestaurantList from "./components/RestaurantsList";
+import RestaurantsList from "./components/RestaurantsList";
 import NotFound from "./components/NotFound";
 import AddRestaurant from "./components/AddRestaurant";
 import RestaurantDetails from "./components/RestaurantDetails";
@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div>
         <Routes>
-          <Route exact path="/" element={<RestaurantList />} />
+          <Route exact path="/" element={<RestaurantsList />} />
           <Route path="/add" element={<AddRestaurant />} />
           <Route path="/restaurants/edit/:id" element={<AddRestaurant />} />
           <Route path="/restaurants/details/:id" element={<RestaurantDetails />} />

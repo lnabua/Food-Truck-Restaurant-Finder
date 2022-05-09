@@ -3,45 +3,24 @@ import { Link, useParams } from "react-router-dom";
 import restaurantService from "../restaurant.service";
 import { useEffect, useState } from "react";
 
-const RestaurantDetails = () => {
-
-    const[name, setName] = useState('');
-    const[locationDescription, setLocationDescription] = useState('');
-    const[address, setAddress] = useState('');
-    const[foodItems, setFoodItems] = useState('');
-    const[schedule, setSchedule] = useState('');
-    const {id} = useParams();
-
-    useEffect(() => {
-        if (id) {
-            restaurantService.get(id)
-                .then(restaurant => {
-                    setName(restaurant.data.name);
-                    setLocationDescription(restaurant.data.locationDescription);
-                    setAddress(restaurant.data.address);
-                    setFoodItems(restaurant.data.foodItems);
-                    setSchedule(restaurant.data.schedule);
-                })
-                .catch(error => {
-                    console.log("something went wrong", error);
-                });
-        }
-    }, [id])
+const RestaurantDetails = (props) => {
 
     return (
         <div className="container">
         <div className="card text-center">
             <div className="card-body">
-                <h6 className="card-title">{name}</h6>
-                <p className="card-text">{address}</p>
+                <h6 className="card-title">{props.restaurant.name}</h6>
+                <p className="card-text">{props.restaurant.address}</p>
                 <ul className="list-group list-group-flush">
-                    <li className="list-group-item">{locationDescription}</li>
-                    <li className="list-group-item">{foodItems}</li>
-                    <li className="list-group-item">{schedule}</li>
+                    <li className="list-group-item">{props.restaurant.locationDescription}</li>
+                    <li className="list-group-item">{props.restaurant.foodItems}</li>
+                    <li className="list-group-item">{props.restaurant.schedule}</li>
                 </ul>
             </div>
         </div>
-        <Link to="/">Back to List</Link>
+        <button type="button" className="btn btn-primary" onClick={() => props.setSelectedRestaurant(null)}>
+            Back to List
+        </button>
         </div>
     );
 }
