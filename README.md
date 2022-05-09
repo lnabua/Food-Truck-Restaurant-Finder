@@ -23,6 +23,8 @@ Sort restaurant list by name
 * Run *npm install* to startup web page.
 
 ### Architechture Overview
+##### Used MVC design pattern.
+
 ##### React
 * Router: App.js
 * Components: RestaurantList, RestaurantDetails, RestaurantCard, AddRestaurant 
@@ -31,7 +33,10 @@ Sort restaurant list by name
 ##### Spring Boot
 * Model: Restaurant
 * Controller: RestaurantController
-* Repository: Restaurant Repository
+* Repository: RestaurantRepository
+
+##### Database
+* MySQL: restaurants_db
 
 ##### MVP
 * As a user I should be able to see the list of retaurants so that I can select the one I want to know more about.
@@ -50,7 +55,10 @@ The app's functionality includes:
 * Delete a restaurant
 
 ### Technical
-This app is built with ReactJS, Java, Spring Boot, and MySQL. Restaurant addresses are from Google Maps API when retrieving restaurant longitude and latitude values. 
+This app is built with ReactJS, Java, Spring Boot, and MySQL. Restaurant addresses are from Google Maps API when retrieving restaurant longitude and latitude values.
+
+#### Google Maps API
+Used *npm install --save react-geocode*. API Key: AIzaSyBhkkcJIJjPHC5sbBVnwxqlgbgDk5e9oo8
 
 ### Development Roadmap
 Future enhancements to include:
