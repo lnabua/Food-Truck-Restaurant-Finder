@@ -8,7 +8,7 @@ https://user-images.githubusercontent.com/59665932/167696200-a6ee7b15-0e4b-46bb-
 ### Getting Started
 * Fork/Clone project to local.
 * Make sure to have all the following technologies downloaded/setup in your computer: IntelliJ, VSCode, MySQL Workbench, Apache Maven
-* Download initial restaurant list data provided by OnRamp and convert to csv file. Change column names to match Restaurant data model. 
+* Use CSV provided below under Database section. 
 * Open MySQL Workbench and run database. See application.properties in project directory/Resources for database information. To run locally, change username and password to your MySQL workbench local username and password. 
 * Open project in IntelliJ Community or IntelliJ IDEA licensed version.
 * Run FoodTruckFinderApplication.java to run spring boot on localhost:8080. This will auto create the database and restaurants table in MySQL.
@@ -29,9 +29,11 @@ https://user-images.githubusercontent.com/59665932/167696200-a6ee7b15-0e4b-46bb-
 
 ##### Database
 * MySQL: restaurants_db
+* CSV file: [Restaurants.csv](https://github.com/lnabua/Food-Truck-Restaurant-Finder/files/8664050/Restaurants.csv)
+
 
 ##### React
-* Router: *App* is a container with React-Router and links to routes paths.
+* Router: App is a container with React-Router and links to routes paths.
      * Home page path "/" routes to RestauarantList.
      * Adding a restaurant path "/add" routes to AddRestaurant.
      * Editing a restaurnt path "/restaurants/edit/:id" routes to Add Restaurant.
