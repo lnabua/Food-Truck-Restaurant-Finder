@@ -6,13 +6,13 @@ https://user-images.githubusercontent.com/59665932/167696200-a6ee7b15-0e4b-46bb-
 
 
 ### Getting Started
-* Fork/Clone project to local.
+* Fork/Clone project to create local repository.
 * Make sure to have all the following technologies downloaded/setup in your computer: IntelliJ, VSCode, MySQL Workbench, Apache Maven
-* Use CSV provided below under Database section. 
+* Use CSV file provided below under Database section. 
 * Open MySQL Workbench and run database. See application.properties in project directory/Resources for database information. To run locally, change username and password to your MySQL workbench local username and password. 
 * Open project in IntelliJ Community or IntelliJ IDEA licensed version.
 * Run FoodTruckFinderApplication.java to run spring boot on localhost:8080. This will auto create the database and restaurants table in MySQL.
-* Refresh MySQL schemas and right-click then select Table Data Import Wizard to upload initial restaurant list data.
+* Refresh MySQL schemas and right-click then select Table Data Import Wizard to upload CSV file as initial restaurant list data.
 * You can check that the data is showing in the backend by conducting a GET resquest in Postman with the url: http://localhost:8080/api/restaurants
 * Open the frontend folder in VSCode.
 * Install the following in the frontend directory: *npm install --save bootstrap@4 react-router-dom axios*
