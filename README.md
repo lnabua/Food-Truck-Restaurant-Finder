@@ -12,13 +12,13 @@ https://user-images.githubusercontent.com/59665932/167696200-a6ee7b15-0e4b-46bb-
 * Open MySQL Workbench and run database. See application.properties in project directory/Resources for database information. To run locally, change username and password to your MySQL workbench local username and password. 
 * Open project in IntelliJ Community or IntelliJ IDEA licensed version.
 * Run FoodTruckFinderApplication.java to run spring boot on localhost:8080. This will auto create the database and restaurants table in MySQL.
-* Refresh MySQL schemas and right-click then select Table Data Import Wizard to upload CSV file as initial restaurant list data.
+* Refresh MySQL schemas. Go to restaurants_db, right-click on restaurants table, then select Table Data Import Wizard to upload CSV file as initial restaurant list data.
 * You can check that the data is showing in the backend by conducting a GET resquest in Postman with the url: http://localhost:8080/api/restaurants
 * Open the frontend folder in VSCode.
 * Install the following in the frontend directory: *npm install --save bootstrap@4 react-router-dom axios*
 * Run *npm install* to start frontend application on localhost:3000.
 
-### Architechture Overview
+### Architecture Overview
 ##### Used MVC design pattern
 ![Spring-React-MVC](https://user-images.githubusercontent.com/59665932/167696102-eb854d20-95fa-41ae-9780-97e148e21c96.png)
 
@@ -33,16 +33,16 @@ https://user-images.githubusercontent.com/59665932/167696200-a6ee7b15-0e4b-46bb-
 
 
 ##### React
-* Router: App is a container with React-Router and links to routes paths.
+* Router: *App* is a container with React-Router and links to routes paths.
      * Home page path "/" routes to RestauarantList.
      * Adding a restaurant path "/add" routes to AddRestaurant.
      * Editing a restaurnt path "/restaurants/edit/:id" routes to Add Restaurant.
      * Showing restaurant details path "/restaurants/details/:id" routes to RestaurantDetails.
 * Components: 
-     * RestaurantList: retrieves and displays all Restaurants.
-     * RestaurantDetails: shows more information on a restaurant. Contains Google Maps API integration to show Google Maps address of the restaurant selected by using the latitude and longitude values provided in the database.
-     * RestaurantCard: contains restaurant information that will be displayed in RestaurantList.
-     * AddRestaurant: has form for adding and editing a restaurant's information based on the restaurant ID.
+     * *RestaurantList*: retrieves and displays all Restaurants.
+     * *RestaurantDetails*: shows more information on a restaurant. Contains Google Maps API integration to show Google Maps address of the restaurant selected by using the latitude and longitude values provided in the database.
+     * *RestaurantCard*: contains restaurant information that will be displayed in RestaurantList.
+     * *AddRestaurant*: has form for adding and editing a restaurant's information based on the restaurant ID.
 * Service: All of the components call the *restaurant.service* CRUD methods which uses Axios to make HTTP requests and receive responses. The *http-common* file initializes Axios with a baseURL using *http://localhost:8080/api* (backend proxy) and headers. 
 
 ### Technologies
@@ -78,7 +78,7 @@ The app's functionality includes:
 Future enhancements to include:
 * Adding a Home page and navigation bar. Changing the styling of the application views.
 * Display a map showing a marker of the location of the restaurant.
-* Display ratings or reviews of the each restaurant.
+* Display images, ratings or reviews of the each restaurant.
 
 ### Live Link
 You can access the app here:
