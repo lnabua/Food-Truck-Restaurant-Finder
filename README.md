@@ -2,7 +2,7 @@
 A responsive web application developed in React and Java with Spring Boot that shows a list of food trucks and restaurants and displays information about each business.
 
 ### Video showing app features
-![](ezgif.com-gif-maker.gif)
+https://user-images.githubusercontent.com/59665932/167695807-62daa5fd-7ada-4587-93ff-f67310076038.mp4
 
 ### Getting Started
 * Fork/Clone project to local.
