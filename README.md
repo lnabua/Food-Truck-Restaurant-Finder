@@ -2,7 +2,8 @@
 A responsive web application developed in React and Java with Spring Boot that shows a list of food trucks and restaurants and displays information about each business.
 
 ### Video showing app features
-https://user-images.githubusercontent.com/59665932/167695807-62daa5fd-7ada-4587-93ff-f67310076038.mp4
+https://user-images.githubusercontent.com/59665932/167696200-a6ee7b15-0e4b-46bb-8272-84aa9581b31b.mp4
+
 
 ### Getting Started
 * Fork/Clone project to local.
@@ -19,7 +20,7 @@ https://user-images.githubusercontent.com/59665932/167695807-62daa5fd-7ada-4587-
 
 ### Architechture Overview
 ##### Used MVC design pattern
-![mvc alt](https://ibb.co/Cm8k3W9/200x150)
+![Spring-React-MVC](https://user-images.githubusercontent.com/59665932/167696102-eb854d20-95fa-41ae-9780-97e148e21c96.png)
 
 ##### Spring Boot
 * Model: *Restaurant* entity class that represents the data model, with the following fields: restaurant id, name, location description, address, food items, latitude/longitude, schedule, and coordinate.
