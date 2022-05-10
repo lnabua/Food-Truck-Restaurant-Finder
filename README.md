@@ -40,7 +40,7 @@ https://user-images.githubusercontent.com/59665932/167696200-a6ee7b15-0e4b-46bb-
      * Showing restaurant details path "/restaurants/details/:id" routes to RestaurantDetails.
 * Components: 
      * RestaurantList: retrieves and displays all Restaurants.
-     * RestaurantDetails: shows more information on a restaurant. Contains Google Maps API integration to show Google Maps address of the restaurant selected.
+     * RestaurantDetails: shows more information on a restaurant. Contains Google Maps API integration to show Google Maps address of the restaurant selected by using the latitude and longitude values provided in the database.
      * RestaurantCard: contains restaurant information that will be displayed in RestaurantList.
      * AddRestaurant: has form for adding and editing a restaurant's information based on the restaurant ID.
 * Service: All of the components call the *restaurant.service* CRUD methods which uses Axios to make HTTP requests and receive responses. The *http-common* file initializes Axios with a baseURL using *http://localhost:8080/api* (backend proxy) and headers. 
@@ -83,6 +83,7 @@ Future enhancements to include:
 ### Live Link
 You can access the app here:
 https://foodtruck-app-1.herokuapp.com/
+Unfortunately, heroku link is no longer functioning. Please refer to video above to see features working.
 
 ### Author
 Lorraine Nabua
